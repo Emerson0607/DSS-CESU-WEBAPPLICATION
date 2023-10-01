@@ -384,17 +384,20 @@ main .coordinators a{
 
 .right .theme-toggler{
     background: var(--color-info-light);
-    display: flex;
+    display: none; 
     justify-content: space-between;
     align-items: center;
     height: 1.6rem;
     width: 4.2rem;
     cursor: pointer;
     border-radius: var(--border-radius-1);
+    /*display: flex*/
+    
 }
 
 .right .theme-toggler span{
     font-size: 1.2rem;
+    
     width: 50%;
     height: 100%;  
     display: flex;

@@ -62,7 +62,18 @@ function toggleDropdown() {
 }
 
 function logout() {
-    // Add your logout logic here
-    // For example, redirect the user to the logout page
-   // window.location.href = "/logout";
+    fetch('/clear_session', {
+        method: 'POST',
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            // Session cleared, now redirect the user to the login page
+            window.location.href = "/login";
+        } else {
+            // Handle error if needed
+            console.error('Error clearing session');
+        }
+    });
+   
 }
